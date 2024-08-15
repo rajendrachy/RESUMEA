@@ -7,9 +7,10 @@ body {
 }
 
 .container {
-    width: 70%;
+    width: 90%;
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 30px 60px; /* Added padding on the left and right */
+    padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -21,14 +22,14 @@ body {
 }
 
 .header h1 {
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-weight: bold;
     color: #3b5998;
     margin-bottom: 10px;
 }
 
 .header p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #666;
 }
 
@@ -44,6 +45,7 @@ body {
     border-radius: 5px;
     margin: 0 10px;
     transition: background-color 0.3s;
+    display: inline-block;
 }
 
 .social-media a:hover {
@@ -55,7 +57,7 @@ body {
 }
 
 .section h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #333;
     border-bottom: 2px solid #3b5998;
@@ -69,10 +71,10 @@ body {
 }
 
 .section li {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 10px;
     line-height: 1.5;
-    padding-left: 15px;
+    padding-left: 25px;
     position: relative;
 }
 
@@ -84,16 +86,15 @@ body {
     font-size: 1.2em;
 }
 
-/* Highlight Heading Style for all headings */
 .highlight-heading {
     font-weight: bold;
-    color: #3b5998; /* Dark blue color for emphasis */
-    font-size: 1.3em; /* Slightly larger font size */
-    text-transform: uppercase; /* Make text uppercase */
-    letter-spacing: 0.5px; /* Add some spacing between letters */
-    border-bottom: 2px solid #3b5998; /* Add an underline */
-    padding-bottom: 2px; /* Add some space between text and underline */
-    display: inline-block; /* Ensure the underline stays directly below the text */
+    color: #3b5998;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #3b5998;
+    padding-bottom: 2px;
+    display: inline-block;
 }
 
 .section ul li ul {
@@ -105,22 +106,57 @@ body {
     content: "";
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
 
+    .header h1 {
+        font-size: 2em;
+    }
 
-/* Add padding to the left of list items */
-.section ul li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    line-height: 1.5;
-    padding-left: 30px; /* Increased padding on the left */
-    position: relative;
+    .header p {
+        font-size: 0.9em;
+    }
+
+    .social-media a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+        margin: 0 5px;
+    }
+
+    .section h2 {
+        font-size: 1.3em;
+    }
+
+    .section li {
+        font-size: 0.9em;
+        padding-left: 20px;
+    }
 }
 
-.section ul li::before {
-    content: "❖";
-    color: #3b5998;
-    position: absolute;
-    left: 10px; /* Adjust the position of the bullet */
-    font-size: 1.2em;
-}
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
 
+    .header p {
+        font-size: 0.8em;
+    }
+
+    .social-media a {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+
+    .section h2 {
+        font-size: 1.2em;
+    }
+
+    .section li {
+        font-size: 0.85em;
+        padding-left: 15px;
+    }
+}
